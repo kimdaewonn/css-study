@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>App-Layout</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: sans-serif;
+                color: #343434;
+                font-size: 24px;
+                text-align: center;
+                font-weight: bold;
+
+                display: grid;
+                grid-template-columns: 80px 400px 1fr 250px;
+                grid-template-rows: 80px 1fr;
+                height: 100vh;
+            }
+            nav,
+            section,
+            main,
+            aside {
+                padding: 24px;
+            }
+
+            nav {
+                background: #343434;
+                color: #fff;
+                grid-row: 1/-1;
+            }
+
+            menu {
+                background: #7048e8;
+                grid-column: 2/-1;
+                /* grid-row: 1; */
+                display: flex;
+                align-items: center;
+                /* justify-content: space-between; */
+                gap: 12px;
+                padding: 0 40px;
+            }
+
+            section {
+                /* grid-column: 2/3; */
+                /* grid-row: 2; */
+                background-color: #e9ecef;
+                padding: 40px;
+
+                overflow: scroll;
+
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+            }
+            .email {
+                background: #adb5bd;
+                height: 96px;
+                display: flex;
+
+                flex-shrink: 0;
+
+                justify-content: center;
+                align-items: center;
+            }
+            /* main {
+                grid-column: 3/4;
+                grid-row: 2;
+            } */
+            aside {
+                background-color: #e9ecef;
+                /* grid-column: 4/5; */
+                /* grid-row: 2; */
+            }
+            button {
+                /* display: inline-block; */
+                font-size: 16px;
+                font-weight: bold;
+                background: #5f3dc4;
+                border: none;
+                cursor: pointer;
+                color: #fff;
+                padding: 8px 12px;
+            }
+            button:last-child {
+                background: #d6336c;
+                margin-left: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>Nav</nav>
+        <menu>
+            <button>New</button>
+            <button>Reply</button>
+            <button>Forward</button>
+            <button>Mark unread</button>
+            <button>Trash</button>
+        </menu>
+        <section>
+            <div class="email">Email 1</div>
+            <div class="email">Email 2</div>
+            <div class="email">Email 3</div>
+            <div class="email">Email 4</div>
+            <div class="email">Email 5</div>
+            <div class="email">Email 6</div>
+            <div class="email">Email 7</div>
+            <div class="email">Email 8</div>
+            <div class="email">Email 9</div>
+            <div class="email">Email 10</div>
+        </section>
+        <main>Email view</main>
+        <aside>Additional inside</aside>
+    </body>
+</html>
