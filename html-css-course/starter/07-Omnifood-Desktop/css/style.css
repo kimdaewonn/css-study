@@ -58,13 +58,6 @@
 /************************/
 /* hero section */
 /************************/
-
-body {
-    font-family: "Rubik", sans-serif;
-    line-height: 1;
-    font-weight: 400;
-    color: #555;
-}
 .section-hero {
     background: #fdf2e9;
     padding: 4.8rem 0 9.6rem 0;
@@ -87,10 +80,6 @@ body {
 
 .hero-img {
     width: 100%;
-}
-
-.margin-right-sm {
-    margin-right: 1.6rem !important;
 }
 
 .delivered-meals {
@@ -205,4 +194,108 @@ body {
 .step-img {
     width: 35%;
     /* z-index: 10; */
+}
+
+/************************/
+/* meals section */
+/************************/
+.section-meals {
+    padding: 9.6rem 0;
+}
+
+.meal {
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+    border-radius: 11px;
+    overflow: hidden;
+    transition: all 0.4s;
+}
+
+.meal:hover {
+    transform: translateY(-1.2rem);
+    box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
+}
+
+.meal-content {
+    padding: 3.2rem 4.8rem 4.8rem 4.8rem;
+}
+
+.meal-tags {
+    margin-bottom: 1.2rem;
+    display: flex;
+    grid-area: 0.4rem;
+}
+.tag {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #333;
+    border-radius: 100px;
+    font-weight: 600;
+}
+
+.tag--vegetarian {
+    background: #51cf66;
+}
+
+.tag--vegan {
+    background: #94d82d;
+}
+
+.tag--paleo {
+    background: #ffd43b;
+}
+
+.meal-title {
+    font-size: 2.4rem;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 3.2rem;
+}
+
+.meal-attributes {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.meal-attribute {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.meal-icon {
+    height: 2.4rem;
+    width: 2.4rem;
+    color: #e67e22;
+}
+
+.meal-img {
+    width: 100%;
+}
+
+.all-recipes {
+    font-size: 1.8rem;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.list-item {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.list-icon {
+    width: 3rem;
+    height: 3rem;
+    color: #e67e22;
 }

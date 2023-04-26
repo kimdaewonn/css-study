@@ -39,6 +39,7 @@ paragraph default: 1.6
 
 -- 06 BORDER-RADIUS
 Default : 9px
+Midium : 11px
 -- 07 WHITESPACE
 
 - Spacing system (px)
@@ -59,6 +60,13 @@ html {
     /* percentage of user's brower font-size setting */
     font-size: 62.5%;
 }
+body {
+    font-family: "Rubik", sans-serif;
+    line-height: 1;
+    font-weight: 400;
+    color: #555;
+}
+
 /************************/
 /* genal reuseble component */
 /************************/
@@ -139,7 +147,7 @@ html {
     border-radius: 9px;
     text-decoration: none;
 
-    transition: background 0.6s;
+    transition: all 0.6s;
 }
 
 .btn--full:link,
@@ -167,4 +175,37 @@ html {
 
     /* Trick to add border inside */
     box-shadow: inset 0 0 0 3px #fff;
+}
+
+.link:link,
+.link:visited {
+    display: inline-block;
+    color: #e67e22;
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 2px;
+    transition: all 0.3s;
+}
+
+.link:hover,
+.link:active {
+    color: #cf711f;
+    border-bottom: 1px solid transparent;
+}
+
+/* helper/settings classes */
+.margin-right-sm {
+    margin-right: 1.6rem !important;
+}
+
+.margin-bottom-md {
+    margin-bottom: 4.8rem !important;
+}
+
+.center-text {
+    text-align: center;
+}
+
+strong {
+    font-weight: 500;
 }
