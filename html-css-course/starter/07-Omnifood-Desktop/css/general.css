@@ -36,6 +36,8 @@ paragraph default: 1.6
 
 - Accents:
 - Greys
+#888
+#767676 lightest grey allowed on #fff
 #6f6f6f lightest grey allowed on #fdf2e9
 #555
 #333
@@ -109,6 +111,10 @@ body {
     grid-template-columns: repeat(4, 1fr);
 }
 
+.grid--5-cols {
+    grid-template-columns: repeat(5, 1fr);
+}
+
 .grid--center-v {
     align-items: center;
 }
@@ -160,15 +166,15 @@ body {
     padding: 1.6rem 3.2rem;
     border-radius: 9px;
     text-decoration: none;
+    /*  */
 
+    transition: all 0.6s;
+}
+.btn {
     /* only necessary for .btn*/
     border: none;
     cursor: pointer;
     font-family: inherit;
-
-    /*  */
-
-    transition: all 0.6s;
 }
 
 .btn--full:link,
