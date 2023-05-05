@@ -3,10 +3,16 @@
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
+        <meta
+            name="description"
+            content="Omnifood is an AI-powered food subscription that will make you eat healthy again, 365 days per year, It's tailored to your persional tastes and nutritional needs."
+        />
         <!-- Always include this line of code!!! -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+        <link rel="icon" href="img/favicon.png" />
+        <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+        <link rel="manifest" href="manifest.webmanifest" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
             href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
@@ -32,7 +38,7 @@
         ></script>
         <script defer src="js/script.js"></script>
 
-        <title>Omnifood</title>
+        <title>Omnifood &mdash; Never cook again!</title>
     </head>
     <body>
         <header class="header">
@@ -130,11 +136,18 @@
                         </div>
                     </div>
                     <div class="hero-img-box">
-                        <img
-                            src="img/hero.png"
-                            class="hero-img"
-                            alt="Woman enjoying food, meals in storage container, and food bowls on a table"
-                        />
+                        <picture>
+                            <source srcset="img/hero.webp" type="image/webp" />
+                            <source
+                                srcset="img/hero-min.png"
+                                type="image/png"
+                            />
+                            <img
+                                src="img/hero-min.png"
+                                class="hero-img"
+                                alt="Woman enjoying food, meals in storage container, and food bowls on a table"
+                            />
+                        </picture>
                     </div>
                 </div>
             </section>
@@ -735,13 +748,14 @@
                                 or pause anytime. And the first meal is on us!
                             </p>
 
-                            <form class="cta-form" action="#">
+                            <form class="cta-form" name="sign-up" netlify>
                                 <div>
                                     <label for="full-name">Full Name</label>
                                     <input
                                         id="full-name"
                                         type="text"
                                         placeholder="John Smith"
+                                        name="full-name"
                                         required
                                     />
                                 </div>
@@ -752,6 +766,7 @@
                                         id="email"
                                         type="email"
                                         placeholder="me@example.com"
+                                        name="email"
                                         required
                                     />
                                 </div>
@@ -760,7 +775,11 @@
                                     <label for="select-where"
                                         >Where did you hear from us?</label
                                     >
-                                    <select id="select-where" required>
+                                    <select
+                                        id="select-where"
+                                        name="select-where"
+                                        required
+                                    >
                                         <option value="">
                                             Please choose one option:
                                         </option>
